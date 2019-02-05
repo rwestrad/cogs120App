@@ -1,8 +1,30 @@
-<html>
-<head>
-	<title>Test Page</title>
-</head>
-<body>
-Begin here (or replace this with any static code already written).
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Job App</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	</head>
+	<body style="background-color:#F0B917;">
+		<div class="title-screen">
+			<p>APP NAME</p>
+		</div>
+		<br style="line-height:500px;">
+		<div class="wrapper">
+			<input placeholder="EMAIL">
+			<input placeholder="PASSWORD">
+			<button id="loginBtn" onclick="handleLogin();"><p>LOGIN</p></button><br>
+			<button id="signupBtn" onclick="handleSignUp();"><p>SIGN UP</p></button>
+		</div>
+	</body>
+	<script>
+		function handleLogin() {
+			window.location.href = "home";
+		}
+
+		function handleSignUp() {
+			window.location.href = "applications";
+		}
+	</script>
 </html>

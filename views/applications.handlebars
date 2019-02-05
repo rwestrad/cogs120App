@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Job App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-bar">
+			<p id="search">Search</p>
+			<p id="menu">Menu</p>
+		</div><wb>
+    <div id="applications">
+      <p>APPLICATIONS</p>
+    </div>
+    <div id="fillers">
+      <pre style="margin:0;"><p>SORT         FILLER</p></pre>
+    </div>
+    <br style="line-height: 300px">
+    <div class="wrapper">
+      <button id="button3"><p>Button 3</p></button>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <dialog id="hamburger">
+      <p>VIEW APPLICATIONS</p>
+      <p>ADD COMPANY</p>
+      <p>COMPARE OFFERS</p>
+      <p>LOGOUT</p>
+    </dialog>
+  </body>
+
+  <script type="text/javascript">
+    document.getElementById('menu').onclick = function() {
+      hamburger.showModal();
+    }
+
+    document.getElementById('search').onclick = function() {
+      window.location.href = "/";
+    }
+
+    window.onclick = function(event) {
+      if(event.target == document.getElementById('hamburger')){
+        hamburger.close();
+      }
+    }
+  </script>
+</html>

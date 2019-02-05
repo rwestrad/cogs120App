@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Job App</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	</head>
+	<body>
+		<div class="top-bar">
+			<p id="search">Search</p>
+			<p id="menu">Menu</p>
+		</div><wb>
+		<div class="status-screen">
+			<div class="all">
+
+			<div class="total-applied">
+				<p>Total Applied</p>
+				<br><br>
+				<p>10</p>
+			</div>
+			<div class="open">
+				<p>Open</p>
+				<br><br>
+				<p>8</p>
+			</div>
+			<div class="closed">
+				<p>Closed</p>
+				<br><br>
+				<p>2</p>
+			</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="wrapper">
+			<button id="button1"><p>Button 1</p></button><br style="line-height:150px;">
+			<button id="button2"><p>Button 2</p></button>
+		</div>
+
+		<!-- Hamburger Menu -->
+    <dialog id="hamburger">
+      <p>VIEW APPLICATIONS</p>
+      <p>ADD COMPANY</p>
+      <p>COMPARE OFFERS</p>
+      <p>LOGOUT</p>
+    </dialog>
+  </body>
+
+  <script type="text/javascript">
+    document.getElementById('menu').onclick = function() {
+      hamburger.showModal();
+    }
+
+    document.getElementById('search').onclick = function() {
+      window.location.href = "/";
+    }
+
+    window.onclick = function(event) {
+      if(event.target == document.getElementById('hamburger')){
+        hamburger.close();
+      }
+    }
+  </script>
+	</body>
+</html>
