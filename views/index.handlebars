@@ -6,16 +6,18 @@
 		<link rel="stylesheet" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	</head>
-	<body style="background-color:#F0B917;">
+	<body id="bg" style="background-color:#4A846F;">
+		<br>
 		<div class="title-screen">
-			<p>APP NAME</p>
+			<p style="font-size:100px"><b>JOB TRACKER</b></p>
 		</div>
-		<br style="line-height:500px;">
+		</img>
+		<br style="line-height:400px;">
 		<div class="wrapper">
 			<input placeholder="EMAIL">
 			<input placeholder="PASSWORD">
 			<button id="loginBtn" onclick="handleLogin();"><p>LOGIN</p></button><br>
-			<button id="signupBtn" onclick="handleSignUp();"><p>SIGN UP</p></button>
+			<button id="signupBtn"><p>SIGN UP</p></button>
 		</div>
 	</body>
 	<script>
@@ -23,8 +25,5 @@
 			window.location.href = "home";
 		}
 
-		function handleSignUp() {
-			window.location.href = "applications";
-		}
 	</script>
 </html>

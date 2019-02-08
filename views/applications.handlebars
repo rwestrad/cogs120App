@@ -8,19 +8,31 @@
   </head>
   <body>
     <div class="top-bar">
-			<p id="search">Search</p>
-			<p id="menu">Menu</p>
+			<img id="search" src="/images/exit.png"></img>
+			<img id="menu" src="/images/menu.png"></img>
 		</div><wb>
-    <div id="applications">
-      <p>APPLICATIONS</p>
+    <div id="applications" style="height:100px">
+      <p>ADD APPLICATION</p>
     </div>
-    <div id="fillers">
-      <pre style="margin:0;"><p>SORT         FILLER</p></pre>
+    <div class="field-wrapper">
+      <label><p>Company Name</p></label>
+      <input type="text" placeholder="Twitter">
+      <label><p>Position</p></label>
+      <input type="text" placeholder="Software Engineer">
+      <label><p>Stage</p></label>
+      <input type="text" placeholder="Phone Screen">
+      <label><p>Contact Info</p></label>
+      <input type="text" placeholder="jim@twiiter.com">
+      <label><p>Website | Portal URL</p></label>
+      <input type="text" placeholder="twitter.com">
+      <label><p>Add Notes</p></label>
+      <input type="text" placeholder="Review Resume!!">
     </div>
-    <br style="line-height: 300px">
     <div class="wrapper">
-      <button id="button3"><p>Button 3</p></button>
+      <button id="addBtn" onclick="goBack()"><p>ADD</p></button>
+      <button id="cancelBtn" onclick="goBack()"><p>CANCEL</p></button>
     </div>
+    <br>
 
     <!-- Hamburger Menu -->
     <dialog id="hamburger">
@@ -38,6 +50,10 @@
 
     document.getElementById('search').onclick = function() {
       window.location.href = "/";
+    }
+
+    function goBack() {
+      window.location.href = "/home";
     }
 
     window.onclick = function(event) {

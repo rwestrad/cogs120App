@@ -17,6 +17,22 @@ p {
   margin: 0;
 }
 
+ul {
+  font-family: 'Lato', sans-serif;
+  list-style-type: none;
+  font-size: 50px;
+  text-align: center;
+  color: #4A846F;
+  text-decoration: underline;
+}
+
+li {
+  margin: 50px;
+}
+li:hover {
+  background-color: #76B39D;
+}
+
 input {
   font-family: 'Lato', sans-serif;
   font-size: 50px;
@@ -28,19 +44,21 @@ input {
 input::placeholder {
   font-family: 'Lato', sans-serif;
   font-size: 50px;
+  color: #76B39D;
 }
 
 .title-screen {
-  height: 300px;
+  height: 100px;
   background-color: #76B39D;
   opacity: 0.75;
   text-align: center;
+  padding: 150px;
 }
 
 .top-bar {
   display: flex;
   flex-direction: row;
-  background-color: #F0B917;
+  background-color: #4A846F;
   width: 100%;
   height: 150px;
   display: inline-block;
@@ -50,13 +68,23 @@ input::placeholder {
 .status-screen {
   background-color: #76B39D;
   width: 100%;
-  height: 600px;
+  height: 570px;
   display: inline-block;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .wrapper {
   text-align: center;
+}
+
+.big {
+  font-size: 100px;
+}
+
+#bg {
+  background-image: url("/images/title.png");
+  background-repeat: no-repeat;
+  background-size: 100% 45%;
 }
 
 #button1 {
@@ -85,11 +113,12 @@ input::placeholder {
 }
 
 #loginBtn {
-  background-color: #76B39D;
+  background-color: #F0B917;
   width: 95%;
   height: 170px;
   border-radius: 20px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  color: #155263;
 }
 
 #signupBtn {
@@ -98,6 +127,24 @@ input::placeholder {
   height: 170px;
   border-radius: 20px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+#addBtn {
+  background-color: #F0B917;
+  width: 40%;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  margin: 20px;
+}
+
+#cancelBtn {
+  background-color: #FCFCFC;
+  width: 40%;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  margin: 20px;
 }
 
 .all {
@@ -119,6 +166,25 @@ input::placeholder {
 .closed {
   text-align: center;
   margin: 70px;
+}
+
+.watch-list {
+  background-color: #F0B917;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  color: white;
+}
+
+.field-wrapper {
+  margin: 50px;
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+}
+
+.field-wrapper input {
+  height: 100px;
+  margin: 30px 0px;
 }
 
 #applications {
@@ -146,4 +212,8 @@ input::placeholder {
 #hamburger p {
   margin: 70px;
   text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+#search, #menu {
+  margin: 30px;
 }

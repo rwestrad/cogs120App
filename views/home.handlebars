@@ -8,34 +8,44 @@
 	</head>
 	<body>
 		<div class="top-bar">
-			<p id="search">Search</p>
-			<p id="menu">Menu</p>
+			<img id="search" src="/images/exit.png"></img>
+			<img id="menu" src="/images/menu.png"></img>
 		</div><wb>
 		<div class="status-screen">
 			<div class="all">
 
 			<div class="total-applied">
-				<p>Total Applied</p>
+				<p style="color:#155263">TOTAL APPLIED</p>
 				<br><br>
-				<p>10</p>
+				<p><b class="big">10</b></p>
 			</div>
 			<div class="open">
-				<p>Open</p>
+				<p style="color:#155263">OPEN</p>
 				<br><br>
-				<p>8</p>
+				<p><b class="big">8</b></p>
 			</div>
 			<div class="closed">
-				<p>Closed</p>
+				<p style="color:#155263">CLOSED</p>
 				<br><br>
-				<p>2</p>
+				<p><b class="big">2</b></p>
 			</div>
 			</div>
 		</div>
 		<br><br>
-		<div class="wrapper">
-			<button id="button1"><p>Button 1</p></button><br style="line-height:150px;">
-			<button id="button2"><p>Button 2</p></button>
+		<div class="watch-list">
+			<p>WATCH LIST</p>
 		</div>
+		<ul>
+			<li onclick="linkClick()">Instagram - Software <img src="/images/star.png" alt="star"></li>
+			<li onclick="linkClick()">Twitter - User Experienece <img src="/images/star.png" alt="star"></li>
+			<li onclick="linkClick()">Facebook - Software <img src="/images/star.png" alt="star"></li>
+		</ul>
+		<div class="watch-list">
+			<p>OFFERS</p>
+		</div>
+		<ul>
+			<li onclick="linkClick()">None Yet!</li>
+		</ul>
 
 		<!-- Hamburger Menu -->
     <dialog id="hamburger">
@@ -54,6 +64,10 @@
     document.getElementById('search').onclick = function() {
       window.location.href = "/";
     }
+
+		function linkClick() {
+			window.location.href = "/applications";
+		}
 
     window.onclick = function(event) {
       if(event.target == document.getElementById('hamburger')){
