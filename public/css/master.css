@@ -1,0 +1,57 @@
+p {
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+}
+
+input {
+  width: 50%;
+}
+
+button {
+  width: 20%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+  padding: 150px 0px;
+}
+
+.jumboBr {
+  line-height: 100px;
+}
+
+@media screen and (max-width: 420px) {
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 75%;
+    margin: 5px 0px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .centered {
+    padding: 100px 0px 15px;
+  }
+
+  .jumboBr {
+    line-height: 200px;
+  }
+}

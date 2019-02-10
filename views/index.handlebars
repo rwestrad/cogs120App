@@ -2,28 +2,27 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>Job App</title>
-		<link rel="stylesheet" href="/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.js"></script>
+		<script type="text/javascript" src="/js/index.js"></script>
+		<link rel="stylesheet" href="/css/bootstrap.css">
+		<link rel="stylesheet" href="/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="/css/master.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<title>Login Page</title>
 	</head>
-	<body id="bg" style="background-color:#4A846F;">
-		<br>
-		<div class="title-screen">
-			<p style="font-size:100px"><b>JOB TRACKER</b></p>
-		</div>
-		</img>
-		<br style="line-height:400px;">
-		<div class="wrapper">
-			<input placeholder="EMAIL">
-			<input placeholder="PASSWORD">
-			<button id="loginBtn" onclick="handleLogin();"><p>LOGIN</p></button><br>
-			<button id="signupBtn"><p>SIGN UP</p></button>
+	<body>
+		<div class="container">
+			<div class="centered">
+			<h1><p id="appName">App Name</p></h1><br class="jumboBr">
+				<input type="email" placeholder="EMAIL">
+				<input type="password" placeholder="PASSWORD">
+				<div class="center"><br>
+					<button id="loginBtn"><p>LOGIN</p></button>
+					<button id="signupBtn"><p>SIGN UP</p></button>
+				</div>
+			</div>
 		</div>
 	</body>
-	<script>
-		function handleLogin() {
-			window.location.href = "home";
-		}
-
-	</script>
 </html>
