@@ -9,12 +9,42 @@
 		<link rel="stylesheet" href="/css/bootstrap.css">
 		<link rel="stylesheet" href="/css/bootstrap-theme.css">
 		<link rel="stylesheet" href="/css/master.css">
+		<link rel="stylesheet" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<title>Add Application Page</title>
 	</head>
 	<body>
+		<div class="top-bar-desktop">
+			<h1><p>Desktop</p></h1>
+		</div>
+		<div class="top-bar-mobile">
+			<img src="/images/magnifying-glass.png" alt="search">
+			<img src="/images/menu.png" alt="menu">
+		</div>
+		<div class="subject-header">
+				<h2>ADD APPLICATION</h2>
+		</div>
 		<div class="container">
-			<p>Add Application Page</p>
+			<br>
+			<form class="" action="index.html" method="post">
+				<label><p>Company Name</p></label><br><input type="text"><br>
+				<label><p>Position</p></label><br><input type="text"><br>
+				<select>
+					<option disabled selected>Stage ...</option>
+					<option>Phone Screen</option>
+					<option>First Interview</option>
+					<option>Coding Challenge</option>
+					<option>Negotiation</option>
+				</select>
+				<label><p>Contact Info</p></label><br><textarea name="name" rows="2" cols="80"></textarea><br>
+				<label><p>Website | Portal URL</p></label><br><input type="text"><br>
+			</form>
+			<br>
+			<label><p>Add Notes<h3>+</h3></p></label><br>
+			<div class="center">
+				<button id="addBtn"><p>ADD<p></button>
+				<button class="cancelBtn">CANCEL</button>
+			</div>
 		</div>
 	</body>
 </html>

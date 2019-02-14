@@ -1,0 +1,119 @@
+/*make users an array*/
+  {
+    "users" : [
+        {
+          "name":"",
+          "currentApplications" : [
+            {
+              "company": "",
+              "position" : "",
+              "stage" : "",
+              "contactInfo": "",
+              "website" : "",
+              "salary": "0",
+              "location": "",
+              "stipend": "",
+              "otherCompensation": "",
+              "favorited" : false,
+              "notes": [
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+              ]
+            },
+            {
+              "company": "",
+              "position" : "",
+              "stage" : "",
+              "contactInfo": "",
+              "website" : "",
+              "salary" : "",
+              "location": "",
+              "stipend" : "",
+              "otherCompensation" : "",
+              "favorited" : false,
+              "notes": [
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+              ],
+            },
+          ]
+        },
+        {
+          "name":"",
+          "currentApplications" : [
+            {
+              "company": "",
+              "position" : "",
+              "stage" : "",
+              "contactInfo": "",
+              "website" : "",
+              "salary": "0",
+              "location": "",
+              "stipend": "",
+              "otherCompensation": "",
+              "favorited" : false,
+              "notes": [
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+              ]
+            },
+            {
+              "company": "",
+              "position" : "",
+              "stage" : "",
+              "contactInfo": "",
+              "website" : "",
+              "salary" : "",
+              "location": "",
+              "stipend" : "",
+              "otherCompensation" : "",
+              "favorited" : false,
+              "notes": [
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+                {
+                  "title": "",
+                  "content": ""
+                },
+              ],
+            },
+          ]
+        }
+    ]
+  }
