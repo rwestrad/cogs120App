@@ -1,5 +1,5 @@
 h4 {
-  margin: 10px; 
+  margin: 10px;
 }
 
 img {
@@ -10,8 +10,12 @@ img {
 span {
   font-size: 25px;
   color: white;
-  float: right;
 }
+
+li span {
+  float: right; 
+}
+
 #addBtn {
   color: #FFFFFF;
   background: #F0B917;
