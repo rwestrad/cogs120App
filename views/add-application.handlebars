@@ -18,8 +18,8 @@
 			<h1><p>Desktop</p></h1>
 		</div>
 		<div class="top-bar-mobile">
-			<img src="/images/magnifying-glass.png" alt="search">
-			<img src="/images/menu.png" alt="menu">
+			<img id="logout" src="/images/logout.png" alt="search">
+			<img id="menu" src="/images/menu.png" alt="menu">
 		</div>
 		<div class="subject-header">
 				<h2>ADD APPLICATION</h2>
@@ -53,6 +53,12 @@
 		}
 		document.getElementById('cancelBtn').onclick = function() {
 			window.location.href = '/view-applications';
+		}
+		document.getElementById('menu').onclick = function() {
+			window.location.href = '/home';
+		}
+		document.getElementById('logout').onclick = function() {
+			window.location.href = '/';
 		}
 	</script>
 </html>

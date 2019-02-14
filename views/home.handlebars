@@ -18,7 +18,7 @@
 			<h1><p>Desktop</p></h1>
 		</div>
 		<div class="top-bar-mobile">
-			<img src="/images/magnifying-glass.png" alt="search">
+			<img id="logout" src="/images/logout.png" alt="search">
 			<img id="menu" src="/images/menu.png" alt="menu">
 		</div>
 
@@ -55,6 +55,9 @@
 		}
 		document.getElementById('seeAllBtn').onclick = function() {
 			window.location.href = '/view-applications';
+		}
+		document.getElementById('logout').onclick = function() {
+			window.location.href = '/';
 		}
 	</script>
 </html>
