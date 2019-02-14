@@ -20,7 +20,7 @@
 		</div>
 		<div class="top-bar-mobile">
 			<img src="/images/magnifying-glass.png" alt="search">
-			<img src="/images/menu.png" alt="menu">
+			<img id="menu" src="/images/menu.png" alt="menu">
 		</div>
 		<div class="subject-header">
 				<h2>APPLICATIONS</h2>
@@ -35,28 +35,23 @@
 		</div>
 
 
-		<div class="company-wrapper">
+		<div class="center">
 			<ul>
-			<!-- <li style="margin-top: 20px"> <img src="/images/circle.png"> Company Name - Position </li> -->
-				<li style="margin-top: 20px"> <p>Company Name - Position</p> <img src="/images/star.png" onclick="star()" id="pic1"> </li>
-				<li> <p>Company Name - Position</p> <img src="/images/unfilledstar.png" id="pic2"> </li>
-				<li> <p>Company Name - Position</p> <img src="/images/star.png" id="pic3"> </li>
-				<li> <p>Company Name - Position</p> <img src="/images/unfilledstar.png" id="pic4"> </li>
-				<li> <p>Company Name - Position</p> <img src="/images/star.png" id="pic5"> </li>
+				<li>Instagram - Software <span><img src="/images/star.png" alt=""></span></li>
+				<li>Twitter - User Experience <span><img src="/images/star.png" alt=""></span></li>
+				<li>Facebook - Software <span><img src="/images/star.png" alt=""></span></li>
 			</ul>
+			<br class="jumboBr">
+			<button id="addCoBtn">ADD COMPANY</button>
 		</div>
 	</body>
 
 <script>
-  	function star() {
-  		var asd = document.getElementById("pic1").src;
-  		console.log(asd);
-  		if (asd.includes("unfilled")) {
-  			document.getElementById("pic1").src = "/images/star.png";
-  		}
-  		else {
-  			document.getElementById("pic1").src = "/images/unfilledstar.png";
-  		}
-  	}
+		document.getElementById('menu').onclick = function() {
+			window.location.href = '/home';
+		}
+		document.getElementById('addCoBtn').onclick = function() {
+			window.location.href = '/add-application';
+		}
   </script>
 </html>

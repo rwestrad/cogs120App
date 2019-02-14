@@ -13,7 +13,7 @@ span {
 }
 
 li span {
-  float: right; 
+  float: right;
 }
 
 #addBtn {
@@ -28,6 +28,18 @@ li span {
   width: 45%;
   border: none;
   box-shadow: none;
+}
+
+#seeAllBtn {
+  color: #FFFFFF;
+  background: #76B39D;
+  width: 45%;
+}
+
+#addCoBtn {
+  color: #FFFFFF;
+  background: #76B39D;
+  width: 45%;
 }
 
 .status-screen {

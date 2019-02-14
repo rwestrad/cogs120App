@@ -19,7 +19,7 @@
 		</div>
 		<div class="top-bar-mobile">
 			<img src="/images/magnifying-glass.png" alt="search">
-			<img src="/images/menu.png" alt="menu">
+			<img id="menu" src="/images/menu.png" alt="menu">
 		</div>
 
 			<div class="status-screen">
@@ -45,6 +45,16 @@
 		</div>
 		<div class="center">
 			<h4><p>None Yet!</p></h4>
+			<br class="jumboBr">
+			<button id="seeAllBtn">SEE ALL</button>
 		</div>
 	</body>
+	<script type="text/javascript">
+		document.getElementById('menu').onclick = function() {
+			window.location.href = '/home';
+		}
+		document.getElementById('seeAllBtn').onclick = function() {
+			window.location.href = '/view-applications';
+		}
+	</script>
 </html>
