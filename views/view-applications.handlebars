@@ -37,9 +37,15 @@
 
 		<div class="center">
 			<ul>
-				<li>Instagram - Software <span><img src="/images/star.png" alt=""></span></li>
-				<li>Twitter - User Experience <span><img src="/images/star.png" alt=""></span></li>
-				<li>Facebook - Software <span><img src="/images/star.png" alt=""></span></li>
+				{{#each currentApplications}}
+				<li>{{name}} - {{position}}
+					{{#if favorited}}
+					<span><img src="/images/star.png" alt="fav"></span>
+					{{else}}
+					<span><img src="/images/unfilledstar.png" alt="not fav"></span>
+					{{/if}}
+				</li>
+				{{/each}}
 			</ul>
 			<br class="jumboBr">
 			<button id="addCoBtn">ADD COMPANY</button>

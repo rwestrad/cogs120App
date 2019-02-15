@@ -13,6 +13,7 @@ var home = require('./routes/home');
 var viewApplications = require('./routes/view-applications');
 var addApplication = require('./routes/add-application');
 var application = require('./routes/application');
+var add = require('./routes/add');
 // Example route
 // var user = require('./routes/user');
 
@@ -43,6 +44,7 @@ app.get('/home', home.view);
 app.get('/view-applications', viewApplications.view);
 app.get('/add-application', addApplication.view);
 app.get('/application', application.view);
+app.get('/add', add.addCompany);
 // Example route
 // app.get('/users', user.list);
 

@@ -44,6 +44,7 @@
 			<input type="text" placeholder="Emailed Me">
 			<div class="center">
 				<button id="addBtn">EDIT</button>
+				<button id="cancelBtn2" class="cancelBtn">CANCEL</button>
 			</div>
 		</div>
 	</body>
@@ -53,6 +54,9 @@
 		}
 		document.getElementById('logout').onclick = function() {
 			window.location.href = '/';
+		}
+		document.getElementById('cancelBtn2').onclick = function() {
+			window.location.href = '/view-applications';
 		}
 	</script>
 </html>

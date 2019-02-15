@@ -35,9 +35,11 @@
 		</div>
 		<div class="center">
 			<ul>
-				<li>Instagram - Software <span><img src="/images/star.png" alt=""></span></li>
-				<li>Twitter - User Experience <span><img src="/images/star.png" alt=""></span></li>
-				<li>Facebook - Software <span><img src="/images/star.png" alt=""></span></li>
+				{{#each currentApplications}}
+					{{#if favorited}}
+						<li>{{name}} - {{position}}<span><img src="/images/star.png" alt=""></span></li>
+					{{/if}}
+				{{/each}}
 			</ul>
 		</div>
 		<div class="subject-header-yellow">

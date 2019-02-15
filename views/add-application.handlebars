@@ -26,9 +26,9 @@
 		</div>
 		<div class="container">
 			<br>
-			<form class="" action="index.html" method="post">
-				<label><p>Company Name</p></label><br><input type="text"><br>
-				<label><p>Position</p></label><br><input type="text"><br>
+			<form class="" action="/add" method="get">
+				<label><p>Company Name</p></label><br><input name="companyName" id="companyName" type="text"><br>
+				<label><p>Position</p></label><br><input name="position" id="position" type="text"><br>
 				<select>
 					<option disabled selected>Stage ...</option>
 					<option>Phone Screen</option>
@@ -38,13 +38,14 @@
 				</select>
 				<label><p>Contact Info</p></label><br><textarea name="name" rows="2" cols="80"></textarea><br>
 				<label><p>Website | Portal URL</p></label><br><input type="text"><br>
-			</form>
+			<!-- </form> -->
 			<br>
 			<label><p>Add Notes<h3>+</h3></p></label><br>
 			<div class="center">
-				<button id="addBtn">ADD</button>
-				<button id="cancelBtn" class="cancelBtn">CANCEL</button>
+				<button id="addBtn" type="submit">ADD</button>
+				<button id="cancelBtn" type="reset" class="cancelBtn">CANCEL</button>
 			</div>
+			</form>
 		</div>
 	</body>
 	<script type="text/javascript">
