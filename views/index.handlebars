@@ -30,8 +30,11 @@
 				<div class="center"><br>
 					<button id="loginBtn"><p>LOGIN</p></button>
 					<button id="signupBtn"><p>SIGN UP</p></button>
-
-				<div class="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false" checkLoginState="fbLogout()"></div>
+					<!-- <div id="fbButton" class="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false" onlogin="checkLoginState()"></div> -->
+					<p class="facebookLogin">
+					<fb:login-button scope="public_profile,email" onclick="checkLoginState();"> 
+					</fb:login-button> 
+				</p>
 				</div>
 			</div>
 		</div>
