@@ -5,69 +5,95 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="/js/bootstrap.js"></script>
-		<script type="text/javascript" src="/js/index.js"></script>
-		<link rel="stylesheet" href="/css/bootstrap.css">
 		<link rel="stylesheet" href="/css/bootstrap-theme.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/navbar.css">
 		<link rel="stylesheet" href="/css/master.css">
 		<link rel="stylesheet" href="/css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<title>Application Page</title>
 	</head>
 	<body>
-		<div class="top-bar-desktop">
-			<h1><p>Desktop</p></h1>
-		</div>
-		<div class="top-bar-mobile">
-			<img id="logout" src="/images/logout.png" alt="search">
-			<img id="menu" src="/images/menu.png" alt="menu">
-		</div>
+
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="background-color: #4A846F !important; margin-bottom: 0">
+      <a class="navbar-brand" href="/home">F L E X</a>
+      <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/view-applications">View Applications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add-application">Add Application</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Logout</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
 		<div class="subject-header">
-				<h2 id="header">TWITTER</h2>
+				<h2 id="header"></h2>
 		</div>
 		<div class="container">
 			<br>
-			<form class="" action="" method="get">
-				<label><p>Position</p></label><br><input id="12" type="text" placeholder="{{name}}"><br>
+			<form class="" action="/edit" method="get">
+				<label id="11"><p>Position</p></label><br><input name="position" id="12" type="text" placeholder="{{name}}"><br>
 				<label><p>Stage</p></label>
-				<select>
+				<select name="stage">
 					<option>Phone Screen</option>
 					<option>First Interview</option>
 					<option>Coding Challenge</option>
 					<option>Negotiation</option>
 				</select>
-				<label><p>Contact Info</p></label><br><textarea id="contactInfo" rows="2" cols="80" placeholder="hr@twitter.com"></textarea><br>
-				<label><p>Website | Portal URL</p></label><br><input id="webURL" type="text" placeholder="twitterportal.com"><br>
-			</form>
+				<label><p>Contact Info</p></label><br><textarea id="contactInfo" name="contactInfo" rows="2" cols="80" placeholder="hr@twitter.com"></textarea><br>
+				<label><p>Website | Portal URL</p></label><br><input id="webURL" name="website" type="text" placeholder="twitterportal.com"><br>
+			<!-- </form> -->
 			<br>
 			<label><p>Notes</p></label>
 			<input type="text" placeholder="Coding Q's">
 			<input type="text" placeholder="Emailed Me">
 			<div class="center">
-				<button id="addBtn">SAVE EDIT</button>
-				<button id="cancelBtn2" class="cancelBtn">CANCEL</button>
+				<button id="addBtn" type="submit">SAVE EDIT</button>
+				<button id="cancelBtn2" type="reset" class="cancelBtn">CANCEL</button>
 			</div>
+			</form>
 		</div>
 	</body>
 	<script type="text/javascript">
-		document.getElementById('menu').onclick = function() {
-			window.location.href = '/home';
-		}
-		document.getElementById('logout').onclick = function() {
-			window.location.href = '/';
-		}
-		document.getElementById('cancelBtn2').onclick = function() {
-			window.location.href = '/view-applications';
-		}
-
+		$('#navBtn').css({
+			'width': '10%',
+			'margin': '0',
+			'padding': '0',
+			'border-radius': 'none',
+			'box-shadow': 'none',
+			'border': 'none'
+		});
 		var coID = localStorage.getItem('myStorage');
 		var res = $.get('http://localhost:3000/jobs/' + coID, callB);
 		function callB(result) {
 			console.log('yo', result);
+			$('#11').attr('name',coID);
 			$('h2').text(result.name);
 			$('#12').attr('placeholder', result.position);
 			$('select').val(result.stage);
 			$('#contactInfo').attr('placeholder', result.contactInfo);
 			$('#webURL').attr('placeholder', result.website);
 		}
+
+		document.getElementById('cancelBtn2').onclick = function() {
+			window.location.href = '/view-applications';
+		}
+
 	</script>
 </html>
