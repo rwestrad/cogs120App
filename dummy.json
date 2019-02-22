@@ -1,23 +1,39 @@
 {
   "currentApplications": [
     {
+      "id": "1",
       "name": "Instagram",
       "position": "Software",
+      "stage" : "Negotiation",
+      "contactInfo": "323-333",
+      "website": "boss.com",
       "favorited": true
     },
     {
+      "id": "2",
       "name": "Twitter",
       "position": "User Experience",
+      "stage" : "Coding Challenge",
+      "contactInfo": "619-5454",
+      "website": "hr@twitter.com",
       "favorited": false
     },
     {
+      "id": "3",
       "name": "Facebook",
       "position": "Software",
+      "stage" : "Phone Screen",
+      "contactInfo": "joe@fb.com",
+      "website": "facebookUniversity.org",
       "favorited": false
     },
     {
+      "id": "4",
       "name": "Google",
       "position": "Quality",
+      "stage" : "First Interview",
+      "contactInfo": "858-1229",
+      "website": "applygoogle.go",
       "favorited": true
     }
   ]

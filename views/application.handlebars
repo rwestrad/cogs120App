@@ -22,12 +22,12 @@
 			<img id="menu" src="/images/menu.png" alt="menu">
 		</div>
 		<div class="subject-header">
-				<h2>TWITTER</h2>
+				<h2 id="header">TWITTER</h2>
 		</div>
 		<div class="container">
 			<br>
-			<form class="" action="index.html" method="post">
-				<label><p>Position</p></label><br><input type="text" placeholder="Software"><br>
+			<form class="" action="" method="get">
+				<label><p>Position</p></label><br><input id="12" type="text" placeholder="{{name}}"><br>
 				<label><p>Stage</p></label>
 				<select>
 					<option>Phone Screen</option>
@@ -35,15 +35,15 @@
 					<option>Coding Challenge</option>
 					<option>Negotiation</option>
 				</select>
-				<label><p>Contact Info</p></label><br><textarea name="name" rows="2" cols="80" placeholder="hr@twitter.com"></textarea><br>
-				<label><p>Website | Portal URL</p></label><br><input type="text" placeholder="twitterportal.com"><br>
+				<label><p>Contact Info</p></label><br><textarea id="contactInfo" rows="2" cols="80" placeholder="hr@twitter.com"></textarea><br>
+				<label><p>Website | Portal URL</p></label><br><input id="webURL" type="text" placeholder="twitterportal.com"><br>
 			</form>
 			<br>
 			<label><p>Notes</p></label>
 			<input type="text" placeholder="Coding Q's">
 			<input type="text" placeholder="Emailed Me">
 			<div class="center">
-				<button id="addBtn">EDIT</button>
+				<button id="addBtn">SAVE EDIT</button>
 				<button id="cancelBtn2" class="cancelBtn">CANCEL</button>
 			</div>
 		</div>
@@ -57,6 +57,17 @@
 		}
 		document.getElementById('cancelBtn2').onclick = function() {
 			window.location.href = '/view-applications';
+		}
+
+		var coID = localStorage.getItem('myStorage');
+		var res = $.get('http://localhost:3000/jobs/' + coID, callB);
+		function callB(result) {
+			console.log('yo', result);
+			$('h2').text(result.name);
+			$('#12').attr('placeholder', result.position);
+			$('select').val(result.stage);
+			$('#contactInfo').attr('placeholder', result.contactInfo);
+			$('#webURL').attr('placeholder', result.website);
 		}
 	</script>
 </html>
