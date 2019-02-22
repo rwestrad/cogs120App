@@ -1,0 +1,31 @@
+{
+  "currentApplications": [
+    {
+      "name": "Instagram",
+      "position": "Software",
+      "favorited": true,
+      "id": "1"
+    },
+    {
+      "name": "Twitter",
+      "position": "User Experience",
+      "favorited": false,
+      "id": "2"
+
+    },
+    {
+      "name": "Facebook",
+      "position": "Software",
+      "favorited": false,
+      "id": "3"
+
+    },
+    {
+      "name": "Google",
+      "position": "Quality",
+      "favorited": true,
+      "id": "4"
+
+    }
+  ]
+}
