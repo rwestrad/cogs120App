@@ -1,18 +1,24 @@
   <!DOCTYPE html>
   <html lang="en">
   <head>
-    <title>Bootstrap Example</title>
+    <title>View Applications Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/master.css">
-    <link rel="stylesheet" href="/css/style.css">
+		<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.js"></script>
+		<!-- <link rel="stylesheet" href="/css/bootstrap-theme.css"> -->
+    <!-- <link rel="stylesheet" href="/css/master.css"> -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <link rel="stylesheet" href="/css/view-applications.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css"> <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="/css/navbar.css">
+		<link rel="stylesheet" href="/css/master.css">
+		<link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
 
@@ -39,7 +45,7 @@
         </form>
       </div>
     </nav>
-    <br>
+
 
     <div class="subject-header">
       <h2>APPLICATIONS</h2>
@@ -47,7 +53,7 @@
 
 		<div class="subject-header-yellow">
       <div class="center">
-        <button id="sortBtn">SORT</button>
+        <button id="sortBtn">SORT &#9660;</button>
         <span>|</span>
         <button id="filterBtn">FILTER</button>
       </div>
@@ -70,7 +76,15 @@
 		</div>
 	</body>
 
-<script>
+<script type="text/javascript">
+$('#navBtn').css({
+	'width': '10%',
+	'margin': '0',
+	'padding': '0',
+	'border-radius': 'none',
+	'box-shadow': 'none',
+	'border': 'none'
+});
 
 		document.getElementById('menu').onclick = function() {
 			window.location.href = '/home';
@@ -108,14 +122,5 @@
 			window.location.href = '/application';
 		}
 
-		$('#navBtn').css({
-      'width': '30%',
-      'margin': '0',
-      'padding': '0',
-      'border-radius': 'none',
-      'box-shadow': 'none',
-      'border': 'none',
-    });
-
   </script>
-  </html>
+</html>
