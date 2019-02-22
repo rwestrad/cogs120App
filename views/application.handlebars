@@ -80,7 +80,7 @@
 			'border': 'none'
 		});
 		var coID = localStorage.getItem('myStorage');
-		var res = $.get('http://localhost:3000/jobs/' + coID, callB);
+		var res = $.get('https://a7-flex-g6.herokuapp.com/jobs/' + coID, callB);
 		function callB(result) {
 			console.log('yo', result);
 			$('#11').attr('name',coID);
