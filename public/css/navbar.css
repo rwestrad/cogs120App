@@ -1,0 +1,11 @@
+.subject-header {
+  text-align: center;
+  background-color: #76B39D;
+  display: inline-block;
+  width: 100%;
+  margin-top:-40px;
+}
+.subject-header h2 {
+  color: #155263;
+  margin: 10px 0px;
+}

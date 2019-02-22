@@ -10,6 +10,12 @@
 		<link rel="stylesheet" href="/css/bootstrap-theme.css">
 		<link rel="stylesheet" href="/css/master.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+		<div id="fb-root"></div>
+
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
+		
 		<title>Login Page</title>
 	</head>
 	<body id="bg">
@@ -24,8 +30,11 @@
 				<div class="center"><br>
 					<button id="loginBtn"><p>LOGIN</p></button>
 					<button id="signupBtn"><p>SIGN UP</p></button>
+
+				<div class="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false" checkLoginState="fbLogout()"></div>
 				</div>
 			</div>
 		</div>
+
 	</body>
 </html>
