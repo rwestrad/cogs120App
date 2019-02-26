@@ -1,7 +1,6 @@
 var data = require("../dummy.json");
 
 exports.addCompany = function(request, response) { 
-	// Your code goes here
   var newCompany = {
     "id": data.currentApplications.length + 1,
     "name": request.query.companyName,

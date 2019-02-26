@@ -43,6 +43,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/home', home.view);
+app.get('/homeAlt', home.viewAlt);
 app.get('/view-applications', viewApplications.view);
 app.get('/add-application', addApplication.view);
 app.get('/application', application.view);

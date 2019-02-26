@@ -15,6 +15,17 @@
 		<link rel="stylesheet" href="/css/master.css">
 		<link rel="stylesheet" href="/css/style.css">
 		<title>Home Page</title>
+		<!-- Google Analytics -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-135189626-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- End Google Analytics -->
 	</head>
 	<body>
 
@@ -42,6 +53,10 @@
       </div>
     </nav>
 
+		{{#if viewAlt}}
+		<button>Remodel Me!</button>
+		{{else}}
+
 			<div class="status-screen">
 						<h4>TOTAL APPLIED<br>10</h4>
 						<h4>OPEN<br>8</h4>
@@ -68,6 +83,8 @@
 		<div class="center">
 			<h4><p>None Yet!</p></h4>
 		</div>
+		{{/if}}
+		
 	</body>
 
 	<script type="text/javascript">

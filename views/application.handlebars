@@ -15,6 +15,17 @@
 		<link rel="stylesheet" href="/css/master.css">
 		<link rel="stylesheet" href="/css/style.css">
 		<title>Application Page</title>
+		<!-- Google Analytics -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-135189626-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<!-- End Google Analytics -->
 	</head>
 	<body>
 
@@ -47,8 +58,8 @@
 		</div>
 		<div class="container">
 			<br>
-			<form class="" action="/edit" method="get">
-				<label id="11"><p>Position</p></label><br><input name="position" id="12" type="text" placeholder="{{name}}"><br>
+			<form action="/edit" method="get">
+				<label id="11"><p>Position</p></label><br><input name="position" id="12" type="text" value="{{position}}"><br>
 				<label><p>Stage</p></label>
 				<select name="stage">
 					<option>Phone Screen</option>
@@ -56,8 +67,8 @@
 					<option>Coding Challenge</option>
 					<option>Negotiation</option>
 				</select>
-				<label><p>Contact Info</p></label><br><textarea id="contactInfo" name="contactInfo" rows="2" cols="80" placeholder="hr@twitter.com"></textarea><br>
-				<label><p>Website | Portal URL</p></label><br><input id="webURL" name="website" type="text" placeholder="twitterportal.com"><br>
+				<label><p>Contact Info</p></label><br><textarea id="contactInfo" name="contactInfo" rows="2" cols="80"></textarea><br>
+				<label><p>Website | Portal URL</p></label><br><input id="webURL" name="website" type="text"><br>
 			<!-- </form> -->
 			<br>
 			<label><p>Notes</p></label>
@@ -67,6 +78,9 @@
 				<button id="addBtn" type="submit">SAVE EDIT</button>
 				<button id="cancelBtn2" type="reset" class="cancelBtn">CANCEL</button>
 			</div>
+			<input id="companyName" type="hidden" name="companyName">
+			<input id="coID" type="hidden" name="coID">
+			<input id="favorited" type="hidden" name="favorited">
 			</form>
 		</div>
 	</body>
@@ -80,15 +94,19 @@
 			'border': 'none'
 		});
 		var coID = localStorage.getItem('myStorage');
-		var res = $.get('https://a7-flex-g6.herokuapp.com/jobs/' + coID, callB);
+		//var res = $.get('https://a7-flex-g6.herokuapp.com/jobs/' + coID, callB);
+		var res = $.get('http://localhost:3000/jobs/' + coID, callB);
 		function callB(result) {
 			console.log('yo', result);
 			$('#11').attr('name',coID);
 			$('h2').text(result.name);
-			$('#12').attr('placeholder', result.position);
+			$('#12').attr('value', result.position);
 			$('select').val(result.stage);
-			$('#contactInfo').attr('placeholder', result.contactInfo);
-			$('#webURL').attr('placeholder', result.website);
+			$('#contactInfo').val(result.contactInfo);
+			$('#webURL').attr('value', result.website);
+			$('#companyName').attr('value', result.name);
+			$('#coID').attr('value', coID);
+			$('#favorited').attr('value', result.favorited);
 		}
 
 		document.getElementById('cancelBtn2').onclick = function() {
