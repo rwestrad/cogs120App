@@ -28,30 +28,7 @@
 		<!-- End Google Analytics -->
 	</head>
 	<body>
-
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="background-color: #4A846F !important; margin-bottom: 0">
-      <a class="navbar-brand" href="/home">F L E X</a>
-      <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/view-applications">View Applications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/add-application">Add Application</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Logout</a>
-          </li>
-        </ul>
-       <!--  <form class="form-inline">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
-      </div>
-    </nav>
+		{{>navbar}}
 
 		<div class="subject-header">
 				<h2 id="header"></h2>
@@ -69,7 +46,6 @@
 				</select>
 				<label><p>Contact Info</p></label><br><textarea id="contactInfo" name="contactInfo" rows="2" cols="80"></textarea><br>
 				<label><p>Website | Portal URL</p></label><br><input id="webURL" name="website" type="text"><br>
-			<!-- </form> -->
 			<br>
 			<label><p>Notes</p></label>
 			<input type="text" placeholder="Coding Q's">

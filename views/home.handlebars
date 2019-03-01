@@ -28,34 +28,9 @@
 		<!-- End Google Analytics -->
 	</head>
 	<body>
+		{{>navbar}}
 
-		<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="background-color: #4A846F !important; margin-bottom: 0">
-      <a class="navbar-brand" href="/home">F L E X</a>
-      <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/view-applications">View Applications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/add-application">Add Application</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Logout</a>
-          </li>
-        </ul>
-        <!-- <form class="form-inline">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
-      </div>
-    </nav>
-
-		{{#if viewAlt}}
-		<button>Remodel Me!</button>
-		{{else}}
+		</div>
 
 			<div class="status-screen">
 						<h4>TOTAL APPLIED<br>10</h4>
@@ -83,23 +58,26 @@
 		<div class="center">
 			<h4><p>None Yet!</p></h4>
 		</div>
+		{{#if viewAlt }}
+		<div class="center">
+			<br class="jumboBr">
+			<button style="background-color:#155263; color:white" onclick="goToAddPage()">
+				ADD APPLICATION
+			</button>
+		</div>
 		{{/if}}
-		
+
 	</body>
 
 	<script type="text/javascript">
-		$('#navBtn').css({
-			'width': '10%',
-			'margin': '0',
-			'padding': '0',
-			'border-radius': 'none',
-			'box-shadow': 'none',
-			'border': 'none'
-		});
 
 		function seeCompany(coID) {
 			localStorage.setItem('myStorage', coID);
 			window.location.href = '/application';
+		}
+
+		function goToAddPage() {
+			window.location.href = '/add-application';
 		}
 	</script>
 </html>
