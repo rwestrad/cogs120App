@@ -53,3 +53,7 @@ li span {
   background: #FCFCFC;
   width: 45%;
 }
+
+.text-wrapper {
+ display:inline;
+}

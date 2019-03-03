@@ -14,3 +14,7 @@ exports.editCompany = function(request, response) { 
   data.currentApplications[coID-1] = editedCompany;
   response.render('view-applications', data);
 }
+
+exports.editFavorited = function(request, response) {
+
+}
