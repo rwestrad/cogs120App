@@ -16,5 +16,5 @@ exports.editCompany = function(request, response) { 
 }
 
 exports.editFavorited = function(request, response) {
-
+  
 }
