@@ -44,17 +44,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	</head>
 	<body>
 		{{>navbar}}
-
-		</div>
-
 			<div class="status-screen">
 						<h4>TOTAL APPLIED<br>10</h4>
 						<h4>OPEN<br>8</h4>
 						<h4>CLOSED<br>2</h4>
 			</div>
-
-
-
 		<div class="subject-header-yellow">
 			<h2>FAVORITES</h2>
 		</div>
@@ -74,6 +68,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		</div>
 		<div class="center">
 			<h4><p>None Yet!</p></h4>
+		</div>
+		<div class="center">
+			<br class="jumboBr">
+			<button style="background-color:#155263 border-radius:20px; color:white" onclick="goToAddPage()">
+				+
+			</button>
 		</div>
 		{{#if viewAlt}}
 		<div class="center">
