@@ -64,6 +64,7 @@
 		function toggle(picID) {
       var isFavorited;
 			var pic = document.getElementById(picID).src;
+      var coID = picID.substr('pic'.length);
 
 			if (pic.includes("unfilled")) {
   			document.getElementById(picID).src = "/images/star.png";
@@ -73,13 +74,13 @@
   			document.getElementById(picID).src = "/images/unfilledstar.png";
         isFavorited = false;
   		}
-
-			var coID = picID.substr('pic'.length);
-			var res = $.get('http://localhost:3000/jobs/' + coID, (result) => {
-				console.log(result);
-        result.favorited = isFavorited;
-        console.log(isFavorited);
-			});
+      $.post('updateFavorited',
+        {
+          favorited: isFavorited,
+          coID: coID,
+        });
+      //(res) => {alert(res);});
+      console.log(coID);
 		}
 
 		function seeCompany(coID) {

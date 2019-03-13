@@ -13,3 +13,11 @@ exports.getJobInfo = function(req, res) { 
   res.json(job);
   // res.render('application', job);
 }
+
+exports.updateFavorited = function(req, res) {
+	var jobID = req.body.coID;
+	jobID = parseInt(jobID);
+	data.currentApplications[jobID-1].favorited = JSON.parse(req.body.favorited);
+
+	res.send(typeof req.body.favorited);
+}
