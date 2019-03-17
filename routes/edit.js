@@ -9,12 +9,13 @@ exports.editCompany = function(request, response) { 
     "contactInfo": request.query.contactInfo,
     "stage": request.query.stage,
     "website": request.query.website,
-    "favorited": false
+    "favorited": request.query.favorited,
+    "firstLetter": request.query.firstLetter
   }
   data.currentApplications[coID-1] = editedCompany;
   response.render('view-applications', data);
 }
 
 exports.editFavorited = function(request, response) {
-  
+
 }

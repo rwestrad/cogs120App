@@ -63,6 +63,7 @@
 			<input id="companyName" type="hidden" name="companyName">
 			<input id="coID" type="hidden" name="coID">
 			<input id="favorited" type="hidden" name="favorited">
+			<input id="firstLetter" type="hidden" name="firstLetter">
 			</form>
 		</div>
 	</body>
@@ -89,6 +90,7 @@
 			$('#companyName').attr('value', result.name);
 			$('#coID').attr('value', coID);
 			$('#favorited').attr('value', result.favorited);
+			$('#firstLetter').attr('value', result.firstLetter);
 		}
 
 		document.getElementById('cancelBtn2').onclick = function() {
