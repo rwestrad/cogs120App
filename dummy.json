@@ -8,7 +8,8 @@
       "contactInfo": "323-333",
       "website": "boss.com",
       "favorited": true,
-      "deleted": false
+      "deleted": false,
+      "firstLetter":"I"
     },
     {
       "id": "2",
@@ -18,7 +19,8 @@
       "contactInfo": "619-5454",
       "website": "hr@twitter.com",
       "favorited": false,
-      "deleted": false
+      "deleted": false,
+      "firstLetter":"T"
     },
     {
       "id": "3",
@@ -28,7 +30,8 @@
       "contactInfo": "joe@fb.com",
       "website": "facebookUniversity.org",
       "favorited": false,
-      "deleted": false
+      "deleted": false,
+      "firstLetter":"F"
     },
     {
       "id": "4",
@@ -38,7 +41,8 @@
       "contactInfo": "858-1229",
       "website": "applygoogle.go",
       "favorited": true,
-      "deleted": false
+      "deleted": false,
+      "firstLetter":"G"
     }
   ]
 }
