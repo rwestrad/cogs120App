@@ -60,10 +60,12 @@
     <div class="center">
       {{#each currentApplications}}
       <div style="display:flex; background-color:#F9F8EB; justify-content: space-between; padding:15px 25px 10px 10px; margin-bottom:5px">
-        <img src="/images/a.png" alt="logo" style="width:60px;height:70px">
-        <div style="display:flex; flex-direction:column; flex-grow:1; text-align:left; margin-left: 10px;">
-          <p>{{name}} - {{position}}</p>
-          <p>{{stage}}</p>
+        <div id="{{id}}" onclick="seeCompany(this.id)" style="display:flex; flex-grow:1">
+          <img src="/images/Default.png" alt="logo" style="width:60px;height:70px">
+          <div style="display:flex; flex-direction:column; flex-grow:1; text-align:left; margin-left: 10px;">
+            <p>{{name}} - {{position}}</p>
+            <p>{{stage}}</p>
+          </div>
         </div>
         <div style="display:flex; flex-direction:column;">
           {{#if favorited}}
