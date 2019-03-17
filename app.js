@@ -53,6 +53,7 @@ app.get('/edit', edit.editCompany);
 // app.get('/users', user.list);
 app.get('/jobs/:id', jobs.getJobInfo);
 app.post('/updateFavorited', jobs.updateFavorited);
+app.post('/deleteCompany', jobs.deleteCompany);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

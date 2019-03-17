@@ -21,3 +21,11 @@ exports.updateFavorited = function(req, res) {
 
 	res.send(typeof req.body.favorited);
 }
+
+exports.deleteCompany = function(req, res) {
+	var jobID = req.body.coID;
+	jobID = parseInt(jobID);
+	data.currentApplications[jobID-1].deleted = JSON.parse(req.body.deleted);
+
+	res.render('view-applications', data);
+}

@@ -59,6 +59,7 @@
 
     <div class="center">
       {{#each currentApplications}}
+      {{#unless deleted}}
       <div style="display:flex; background-color:#F9F8EB; justify-content: space-between; padding:15px 25px 10px 10px; margin-bottom:5px">
         <div id="{{id}}" onclick="seeCompany(this.id)" style="display:flex; flex-grow:1">
           <img src="/images/Default.png" alt="logo" style="width:60px;height:70px">
@@ -73,9 +74,10 @@
           {{else}}
             <img src="/images/unfilledstar.png" alt="not fav" id="pic+{{id}}" onclick="toggle(this.id)">
           {{/if}}
-          <img src="/images/delete.png" alt="del" onclick="deleteCompany(this.id)">
+          <img id="del+{{id}}" src="/images/delete.png" alt="del" onclick="deleteCompany(this.id)">
         </div>
       </div>
+      {{/unless}}
       {{/each}}
     </div>
 	</body>
@@ -98,12 +100,21 @@
         {
           favorited: isFavorited,
           coID: coID,
-        });
+        }
+      );
       console.log(coID);
 		}
 
-    function deleteCompany(coID){
-      alert("delete me??");
+    function deleteCompany(delID){
+      var coID = delID.substr('del'.length);
+      //alert(coID + " delete me??");
+      $.post('deleteCompany',
+        {
+          deleted: true,
+          coID: coID
+        }
+      );
+      window.location.reload();
     }
 
 		function seeCompany(coID) {

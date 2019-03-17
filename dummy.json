@@ -7,7 +7,8 @@
       "stage" : "Negotiation",
       "contactInfo": "323-333",
       "website": "boss.com",
-      "favorited": true
+      "favorited": true,
+      "deleted": false
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "stage" : "Coding Challenge",
       "contactInfo": "619-5454",
       "website": "hr@twitter.com",
-      "favorited": false
+      "favorited": false,
+      "deleted": false
     },
     {
       "id": "3",
@@ -25,7 +27,8 @@
       "stage" : "Phone Screen",
       "contactInfo": "joe@fb.com",
       "website": "facebookUniversity.org",
-      "favorited": false
+      "favorited": false,
+      "deleted": false
     },
     {
       "id": "4",
@@ -34,7 +37,8 @@
       "stage" : "First Interview",
       "contactInfo": "858-1229",
       "website": "applygoogle.go",
-      "favorited": true
+      "favorited": true,
+      "deleted": false
     }
   ]
 }

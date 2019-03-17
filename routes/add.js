@@ -8,7 +8,8 @@ exports.addCompany = function(request, response) { 
     "contactInfo": request.query.contactInfo,
     "stage": request.query.stage,
     "website": request.query.website,
-    "favorited": false
+    "favorited": false,
+    "deleted": false
   }
   data.currentApplications.push(newCompany);
   response.render('view-applications', data);
