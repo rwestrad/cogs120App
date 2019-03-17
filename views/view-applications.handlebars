@@ -28,7 +28,7 @@
 		</script>
 		<!-- End Google Analytics -->
   </head>
-  <body>
+  <body style="background-color:white">
     {{>navbar}}
 
     <div class="subject-header">
@@ -43,8 +43,8 @@
       </div>
     </div>
 
-		<div class="center">
-			<ul>
+		<!-- <div class="center">
+			<ul id="appList">
 				{{#each currentApplications}}
 				<li><div id="{{id}}" onclick="seeCompany(this.id)" class="text-wrapper">{{name}} - {{position}}</div>
 					{{#if favorited}}
@@ -55,9 +55,27 @@
 				</li>
 				{{/each}}
 			</ul>
-			<!-- <br class="jumboBr">
-			<button id="addCoBtn">ADD COMPANY</button> -->
-		</div>
+		</div> -->
+
+    <div class="center">
+      {{#each currentApplications}}
+      <div style="display:flex; background-color:#F9F8EB; justify-content: space-between; padding:15px 25px 10px 10px; margin-bottom:5px">
+        <img src="/images/a.png" alt="logo" style="width:60px;height:70px">
+        <div style="display:flex; flex-direction:column; flex-grow:1; text-align:left; margin-left: 10px;">
+          <p>{{name}} - {{position}}</p>
+          <p>{{stage}}</p>
+        </div>
+        <div style="display:flex; flex-direction:column;">
+          {{#if favorited}}
+            <img src="/images/star.png" alt="fav" id="pic+{{id}}" onclick="toggle(this.id)">
+          {{else}}
+            <img src="/images/unfilledstar.png" alt="not fav" id="pic+{{id}}" onclick="toggle(this.id)">
+          {{/if}}
+          <img src="/images/delete.png" alt="del" onclick="deleteCompany(this.id)">
+        </div>
+      </div>
+      {{/each}}
+    </div>
 	</body>
 
 	<script type="text/javascript">
@@ -79,14 +97,21 @@
           favorited: isFavorited,
           coID: coID,
         });
-      //(res) => {alert(res);});
       console.log(coID);
 		}
+
+    function deleteCompany(coID){
+      alert("delete me??");
+    }
 
 		function seeCompany(coID) {
 			localStorage.setItem('myStorage', coID);
 			window.location.href = '/application';
 		}
+
+    // $('#appList').css("list-style-image", "url(/images/rsz_a.png)");
+    // $('li:before').css("height", "70px");
+    // $('li:before').css("width", "20%");
 
   </script>
 </html>
